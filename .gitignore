@@ -1,0 +1,23 @@
+*.class
+
+#package file
+*.war
+*.ear
+
+#kdiff3 ignore
+*.orig
+
+#maven ignore
+target/
+*.txt
+#idea
+.idea/
+/idea/
+*.ipr
+*.iml
+*.iws
+*.log
+*.catce
+*.diff
+*.patch
+*.tmp
