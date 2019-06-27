@@ -33,7 +33,6 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
-
     <!-- 声明式事务 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/><!-- 引用数据源 -->
@@ -57,5 +56,8 @@
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
     </aop:config>
 
-    
+    <!-- 全局扫描 -->
+    <!-- 配置bean或者注解方式，此处选用注解的方式，让Spring自动扫描 -->
+    <context:component-scan base-package="com.bupt.sm"/> <!--指定上层所在包，这样所有的包都能扫描-->
+    <aop:aspectj-autoproxy/><!--以aop方式处理日志，打开aspect自动代理-->
 </beans>
