@@ -7,9 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54b08dbc-ba65-4ef7-860a-19ab79f66cc4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sm_web/src/main/java/com/bupt/sm/controller/DepartmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sm_web/src/main/webapp/department_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sm_web/src/main/webapp/department_add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sm_web/src/main/java/com/bupt/sm/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sm_web/src/main/java/com/bupt/sm/controller/DepartmentController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sm_web/src/main/java/com/bupt/sm/controller/DepartmentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="443">
+              <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,10 +40,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sm_web/src/main/webapp/department_add.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+              <folding>
+                <element signature="e#1164#1170#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sm_web/src/main/webapp/department_list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="67" lean-forward="true" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+            <state relative-caret-position="513">
+              <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
               <folding>
                 <element signature="e#1273#1279#1#HTML" expanded="true" />
               </folding>
@@ -80,8 +92,9 @@
         <option value="$PROJECT_DIR$/sm_service/src/main/java/com/bupt/sm/service/DepartmentService.java" />
         <option value="$PROJECT_DIR$/sm_service/src/main/java/com/bupt/sm/service/impl/DepartmentServiceImpl.java" />
         <option value="$PROJECT_DIR$/sm_service/src/main/java/com/bupt/sm/dao/DepartmentDao.java" />
-        <option value="$PROJECT_DIR$/sm_web/src/main/java/com/bupt/sm/controller/DepartmentController.java" />
         <option value="$PROJECT_DIR$/sm_web/src/main/webapp/department_list.jsp" />
+        <option value="$PROJECT_DIR$/sm_web/src/main/webapp/department_add.jsp" />
+        <option value="$PROJECT_DIR$/sm_web/src/main/java/com/bupt/sm/controller/DepartmentController.java" />
       </list>
     </option>
   </component>
@@ -342,12 +355,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561426560512</updated>
-      <workItem from="1561426563912" duration="21725000" />
+      <workItem from="1561426563912" duration="23010000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21725000" />
+    <option name="totallyTimeSpent" value="23010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -359,7 +372,7 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1609808" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1609808" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" weight="0.32917467" />
       <window_info anchor="bottom" id="Spring" weight="0.32917467" />
@@ -372,7 +385,7 @@
       <window_info anchor="bottom" id="Version Control" weight="0.33013436" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16410749" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16410749" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -552,22 +565,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sm_web/src/main/webapp/department_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding>
+            <element signature="e#1273#1279#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sm_web/src/main/java/com/bupt/sm/controller/DepartmentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="443">
+          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sm_web/src/main/webapp/department_list.jsp">
+    <entry file="file://$PROJECT_DIR$/sm_web/src/main/webapp/department_add.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="67" lean-forward="true" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+        <state relative-caret-position="513">
+          <caret line="34" column="34" lean-forward="true" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
           <folding>
-            <element signature="e#1273#1279#1#HTML" expanded="true" />
+            <element signature="e#1164#1170#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
