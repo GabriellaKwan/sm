@@ -63,7 +63,7 @@ public class DispatcherServlet extends GenericServlet {
         Object obj = context.getBean(beanName);//根据beanName获取对象obj
         try {//获取方法
             Method method = obj.getClass().getMethod(methodName,HttpServletRequest.class,HttpServletResponse.class);//通过类的getMethod()获取方法名
-            method.invoke(obj,request,response);//invoke方法，对象obj，参数
+            method.invoke(obj,request,response);//invoke方法调用，对象obj，参数
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {//invoke参数request产生的异常处理

@@ -41,7 +41,7 @@ public class StaffController {
         String idNumber = request.getParameter("idNumber");
         String info =request.getParameter("info");
         Date bornDate=null;
-        try {
+        try {//转换器,指定支付串格式,String转Date类型操作
             bornDate = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("bornDate"));
         } catch (ParseException e) {
             e.printStackTrace();
@@ -105,7 +105,7 @@ public class StaffController {
     public void detail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer id = Integer.parseInt(request.getParameter("id"));
         Staff staff = staffService.get(id);
-        request.setAttribute("OBJ",staff);
+        request.setAttribute("OBJ",staff) ;
         request.getRequestDispatcher("../staff_detail.jsp").forward(request,response);
     }
 }
