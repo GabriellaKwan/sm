@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--配置映射文件-->
+<mapper namespace="com.bupt.sm.dao.DepartmentDao"><!--根节点配置-->
+    <resultMap id="resultMap" type="Department"><!--结果集配置，type可以简写-->
+        <id property="id" column="id" javaType="Integer"/><!--主键字段用id标签-->
+        <result property="name" column="name" javaType="String"/><!--其他用result标签-->
+        <result property="address" column="address" javaType="String"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="Department" useGeneratedKeys="true"><!--参数类型为Department，调用数据库自增的规范-->
+        insert into department(name,address) value(#{name},#{address})
+    </insert>
+    <delete id="delete" parameterType="Integer">
+        delete from department where id=#{id}
+    </delete>
+    <update id="update" parameterType="Department">
+        update department set name=#{name},address=#{address} where id=#{id}
+    </update>
+    <select id="selectById" parameterType="Integer" resultMap="resultMap"><!--因为有结果，所以用resultMap-->
+        select * from department where id=#{id}
+    </select>
+    <select id="selectAll" resultMap="resultMap">
+        select * from department
+    </select>
+
+</mapper>
