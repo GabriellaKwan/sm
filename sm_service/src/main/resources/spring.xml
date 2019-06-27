@@ -33,4 +33,29 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
+
+    <!-- 声明式事务 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/><!-- 引用数据源 -->
+    </bean>
+    <!-- 定义通知，tx空间中的advice标签 ，以通知形式细致的安排事务的处理方式-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes><!-- 查询相关方法，设置为只读，加快执行效率； -->
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="find*" read-only="true"/>
+            <tx:method name="search*" read-only="true"/>
+            <!--除此之外，增删改操作，强制使用事务。设置事务的传播行为，REQUIRED。当一个业务方法被调用，如果它包含在一个事务里，就依赖这个事务；反之则会以一个事务封装 -->
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+    <!--植入，aop命名空间下的config-->
+    <aop:config>
+        <!--定义切入点-->
+        <!--aspect表达式：该包下所有的类，该类下所有名字的方法，方法的参数任意，即代表业务层所有的方法-->
+        <aop:pointcut id="txPointcut" expression="execution(* com.bupt.sm.service.*.*(..))"/>
+        <!--关联切入点和通知-->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+    </aop:config>
+
+    
 </beans>
