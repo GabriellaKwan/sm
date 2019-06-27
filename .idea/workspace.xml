@@ -7,11 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54b08dbc-ba65-4ef7-860a-19ab79f66cc4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sm_service/src/main/java/com/bupt/sm/dao/StaffDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sm_service/src/main/java/com/bupt/sm/entity/Staff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sm_service/src/main/java/com/bupt/sm/service/StaffService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sm_service/src/main/resources/com/bupt/sm/dao/StaffDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sm_service/src/main/java/com/bupt/sm/service/impl/StaffServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sm_web/src/main/java/com/bupt/sm/controller/StaffController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sm_web/src/main/webapp/staff_list.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,20 +52,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sm_web/src/main/java/com/bupt/sm/controller/StaffController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sm_web/src/main/webapp/staff_list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sm_service/src/main/java/com/bupt/sm/service/impl/StaffServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-              <folding>
-                <element signature="e#643#644#0" expanded="true" />
-                <element signature="e#678#679#0" expanded="true" />
-                <element signature="e#715#716#0" expanded="true" />
-                <element signature="e#753#754#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-                <element signature="e#835#836#0" expanded="true" />
-                <element signature="e#870#871#0" expanded="true" />
-                <element signature="e#913#914#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="513">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -186,35 +195,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sm_service/src/main/resources/com/bupt/sm/dao/StaffDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" column="82" lean-forward="true" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sm_web/src/main/java/com/bupt/sm/global/EncodingFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -245,6 +233,8 @@
         <option value="$PROJECT_DIR$/sm_service/src/main/resources/com/bupt/sm/dao/StaffDao.xml" />
         <option value="$PROJECT_DIR$/sm_service/src/main/java/com/bupt/sm/service/StaffService.java" />
         <option value="$PROJECT_DIR$/sm_service/src/main/java/com/bupt/sm/service/impl/StaffService.java" />
+        <option value="$PROJECT_DIR$/sm_web/src/main/java/com/bupt/sm/controller/StaffController.java" />
+        <option value="$PROJECT_DIR$/sm_web/src/main/webapp/staff_list.jsp" />
         <option value="$PROJECT_DIR$/sm_service/src/main/java/com/bupt/sm/service/impl/StaffServiceImpl.java" />
       </list>
     </option>
@@ -456,6 +446,10 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bupt.sm.service.impl" />
+      <recent name="com.bupt.sm.controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WorkSpace\Idea\sm\sm_service\src\main\resources" />
       <recent name="D:\WorkSpace\Idea\sm\sm_web\src\main\webapp" />
@@ -558,12 +552,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561426560512</updated>
-      <workItem from="1561426563912" duration="26244000" />
+      <workItem from="1561426563912" duration="26561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26244000" />
+    <option name="totallyTimeSpent" value="26561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
@@ -908,19 +902,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sm_web/src/main/webapp/staff_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sm_service/src/main/java/com/bupt/sm/service/impl/StaffServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+        <state relative-caret-position="513">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sm_web/src/main/java/com/bupt/sm/controller/StaffController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
