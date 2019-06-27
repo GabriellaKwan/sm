@@ -36,4 +36,32 @@ public class DepartmentController {
        departmentService.add(department);
        response.sendRedirect("list.do");//重定向会list界面
     }
+
+    public void toEdit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //修改哪一个对象，传递id
+        Integer id = Integer.parseInt(request.getParameter("id"));
+        Department department = departmentService.get(id);
+        request.setAttribute("OBJ",department);
+        request.getRequestDispatcher("../department_edit.jsp").forward(request,response);
+    }
+    public void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Integer id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String address = request.getParameter("address");
+
+        Department department = new Department();
+        department.setId(id);
+        department.setName(name);
+        department.setAddress(address);
+
+        departmentService.edit(department);
+        response.sendRedirect("list.do");
+    }
+
+    public void remove(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Integer id = Integer.parseInt(request.getParameter("id"));
+        departmentService.remove(id);
+        response.sendRedirect("list.do");
+    }
+
 }
