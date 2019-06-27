@@ -18,4 +18,14 @@
     <url-pattern>/*/</url-pattern><!--配置过滤路径，所有的请求都需要通过该过滤器进行过滤-->
   </filter-mapping>
 
+
+  <servlet><!--配置核心控制器servlet-->
+    <servlet-name>Global</servlet-name>
+    <servlet-class>com.bupt.sm.global.DispatcherServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Global</servlet-name>
+    <url-pattern>*.do</url-pattern><!--访问路径，所有以.do为后缀的请求路径，都交给核心控制器DispatcherServlet来完成-->
+  </servlet-mapping>
 </web-app>
