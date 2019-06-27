@@ -12,5 +12,25 @@
     http://www.springframework.org/schema/aop/spring-aop.xsd
     http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <!--Spring整合MyBatis-->
+    <!--配置数据源dataSource-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <!--默认端口3306，通常在url直接设置中文字符集，防止乱码，注意&符号是特殊字符，需要转义&amp-->
+        <property name="url" value="jdbc:mysql://localhost:3306/sm?useUnicode=true&amp;characterEncoding=utf-8"/>
+        <property name="username" value="root"/>
+        <property name="password" value="123456"/>
+    </bean>
+    <!--使用MyBatis实现持久化，需要配置sqlSessionFactory，通过属性注入构造SessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!--定义别名，在映射文件中，可以不加包名，可以直接使用类名-->
+        <property name="typeAliasesPackage" value="com.bupt.sm.entity"/>
+    </bean>
+    <!--Mybatis自动映射，指定一个包，包里面放置对应持久化接口和对应文件-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.bupt.sm.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
 
 </beans>
