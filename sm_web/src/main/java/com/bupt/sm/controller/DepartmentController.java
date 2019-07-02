@@ -26,7 +26,9 @@ public class DepartmentController {
         request.getRequestDispatcher("../department_add.jsp").forward(request,response);
     }
     public void add(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       String name = request.getParameter("name");
+        //设置request获取请求内容的数据编码
+        request.setCharacterEncoding("UTF-8");
+        String name = request.getParameter("name");
        String address = request.getParameter("address");
 
        Department department = new Department();
@@ -45,6 +47,8 @@ public class DepartmentController {
         request.getRequestDispatcher("../department_edit.jsp").forward(request,response);
     }
     public void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //设置request获取请求内容的数据编码
+        request.setCharacterEncoding("UTF-8");
         Integer id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String address = request.getParameter("address");

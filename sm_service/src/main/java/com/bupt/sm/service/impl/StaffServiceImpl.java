@@ -1,35 +1,38 @@
 package com.bupt.sm.service.impl;
 
-import com.bupt.sm.dao.DepartmentDao;
-import com.bupt.sm.entity.Department;
-import com.bupt.sm.service.DepartmentService;
+import com.bupt.sm.dao.StaffDao;
+import com.bupt.sm.entity.Staff;
+import com.bupt.sm.service.StaffService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
+@Service("staffService")
+public class StaffServiceImpl implements StaffService {
+    @Autowired
+    private StaffDao staffDao;
 
-@Service("departmentService")//自己指定beanName，否则默认时类名首字母小写+Impl后缀
-public class StaffServiceImpl implements DepartmentService {
-
-    @Autowired//注解方式自动注入
-    private DepartmentDao departmentDao;
-    public void add(Department department) {
-        departmentDao.insert(department);
+    public void add(Staff staff) {
+        staff.setPassword("123456");
+        staff.setWorkTime(new Date());
+        staff.setStatus("正常");
+        staffDao.insert(staff);
     }
 
     public void remove(Integer id) {
-        departmentDao.delete(id);
+        staffDao.delete(id);
     }
 
-    public void edit(Department department) {
-        departmentDao.update(department);
+    public void edit(Staff staff) {
+        staffDao.update(staff);
     }
 
-    public Department get(Integer id) {
-        return departmentDao.selectById(id);
+    public Staff get(Integer id) {
+        return staffDao.selectById(id);
     }
 
-    public List<Department> getAll() {
-        return departmentDao.selectAll();
+    public List<Staff> getAll() {
+        return staffDao.selectAll();
     }
 }

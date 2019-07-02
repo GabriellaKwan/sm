@@ -35,13 +35,15 @@ public class StaffController {
         request.getRequestDispatcher("../staff_add.jsp").forward(request,response);
     }
     public void add(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //设置request获取请求内容的数据编码
+        request.setCharacterEncoding("UTF-8");
         String account = request.getParameter("account");
         String name = request.getParameter("name");
         String sex = request.getParameter("sex");
         String idNumber = request.getParameter("idNumber");
         String info =request.getParameter("info");
         Date bornDate=null;
-        try {//转换器,指定支付串格式,String转Date类型操作
+        try {//转换器,指定字符串格式,String转Date类型操作
             bornDate = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("bornDate"));
         } catch (ParseException e) {
             e.printStackTrace();
@@ -70,6 +72,8 @@ public class StaffController {
         request.getRequestDispatcher("../staff_edit.jsp").forward(request,response);
     }
     public void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //设置request获取请求内容的数据编码
+        request.setCharacterEncoding("UTF-8");
         Integer id = Integer.parseInt(request.getParameter("id"));
         String account = request.getParameter("account");
         String name = request.getParameter("name");

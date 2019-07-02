@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -50,7 +50,7 @@
                     </li>
                     <li class="clearfix">
                         <span class="title">姓名：</span>
-                        <div class="li_r">${OBJ.account}</div>
+                        <div class="li_r">${OBJ.name}</div>
                     </li>
                     <li class="clearfix">
                         <span class="title">性别：</span>

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%--迭代标签库--%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--格式化输出标签--%>
